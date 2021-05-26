@@ -1,0 +1,23 @@
+John|43|123 Apple street|514 428-3452
+Katya| 26|49 Queen Mary Road|514 234-7654
+Ahmad|91|1888 Pepper Lane|
+Tom|41 |113 Queensland St.|514-323-4444
+Daniel|134|233 Werbrouck St.|514-433-3030
+Helen|323|489 Westmount Ave. |514-523-3404
+Kelly|423|186 Keneith Ave.| 514-552-5594
+Katty|783|590 Mountain View|514-343-4343 
+Nancy|21|Stuffy Street|345-7896
+|199|123 Apple Street|435-456-5768
+
+
+
+sue|||
+Bob| 49|233 Doop Road|345-567-3437
+Kalen |434|189 Cresent Road|434-434-3434
+ Matt| 434|249 Mining Road|434-343-6784
+Kitty|343|184 Farway Ave|343-433-3433
+Michelle|341|767 Sunny Road|434-043-8695
+West |343|556 Keith Ave|343-656-750
+
+
+
