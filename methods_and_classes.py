@@ -1,6 +1,6 @@
-
 # -*- coding: utf-8 -*-
 """
+Student ID: 40019093
 @author: HUY TRAN
 Python version: Python 3.6.4
 """
@@ -9,45 +9,58 @@ Python version: Python 3.6.4
 
 """class CustomerData"""
 
-class EmployeesData:
-    # default constructor with 2 instance variables
-    def __init__(self, employeeNumber, employeeName):
-        self.employeeName = employeeName
-        self.employeeNumber = employeeNumber
-      
+class CustomerData:
+    # default constructor with 4 instance variables
+    def __init__(self, firstName, age, address, phoneNum):
+        self.firstName = firstName
+        self.age = age
+        self.address = address
+        self.phoneNum = phoneNum
 
 
-    # 2 getters
-    def getEmployeeName(self):
-        return self.employeeName
+    # 4 getters
+    def getName(self):
+        return self.firstName
     
-    def getEmployeeNumber(self):
-        return self.employeeNumber
+    def getAge(self):
+        return self.age
+    
+    def getAddress(self):
+        return self.address
+    
+    def getphoneNum(self):
+        return self.phoneNum
 
    
 
     # this is my toString() method just like in Java
-     # this is DOUBLE-CHECK just in case employee name is given wrongly formatted
+																				 
     def __str__(self):
-        # format output of employee name
-        comma = ","
-        for comma in self.employeeName:
-            self.employeeName = ",".join(self.employeeName.split(" "))
+        # format output of phone number
+        whiteSpace = " "
+        for whiteSpace in self.phoneNum:
+            self.phoneNum = "-".join(self.phoneNum.split(" "))
         # return the complete formatted string for output purpose
-        return self.employeeName+"," + self.employeeNumber 
+        return self.firstName+"|" + self.age + "|" + self.address + "|" + self.phoneNum
     
 
     
-    # 2 setters
+    # 4 setters
     def setName(self, name):
-        self.employeeName = name
-        return self.employeeName
+        self.firstName = name
+        return self.firstName
     
     def setAge(self, age):
-        self.employeeNumber = employeeNumber
-        return self.employeeNumber
+        self.age = age
+        return self.age
     
-   
+    def setAddress(self, address):
+        self.address = address
+        return self.address
+    
+    def setPhoneNum(self, phone):
+        self.phoneNum = phone
+        return self.phoneNum
     
               
     
@@ -60,14 +73,14 @@ class EmployeesData:
 # creating an empty list to store all the tuples which contain data of each customer    
 listOfTuples=[] 
 
-# readFile() method will read file employees.dat and check for additional leading or trailing spaces
+# readFile() method will read file data.txt and check for additional leading or trailing spaces
 def readFile():
-    file = open("employees.dat", 'r')
+    file = open("data.txt", 'r')
     for line in file:
         # if line is empty, skip the entire line
         if line != '':
             # strip off the "\n" in each String line and split into each element in a list
-            lineList = line.strip().split(',') 
+            lineList = line.strip().split('|') 
             # removing whitespace in each element of the lineList
             for i in range(len(lineList)):
                 lineList[i]= lineList[i].strip(' ')
@@ -89,14 +102,10 @@ readFile()
 listOfObjects = []
 # unpacking each list in listOfTuples
 for item in listOfTuples:
-    employeeNumber, employeeName = item
+    name, age, address, phone = item
     # creating eachCustomer which is the object containing 4 fields
-    eachEmployee = EmployeesData(employeeNumber, employeeName)
-    listOfObjects.append(eachEmployee)
-
-
-
-
+    eachCustomer = CustomerData(name, age, address, phone)
+    listOfObjects.append(eachCustomer)
 
 
 
